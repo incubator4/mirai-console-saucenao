@@ -1,3 +1,19 @@
+/*
+ * Copyright (c) 2022.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>
+ */
+
 package com.incubator4.data
 
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -164,9 +180,11 @@ sealed class ResultData(
         override fun prettyPrint(): String {
             return "source=${this.source}"
         }
+
         @ExperimentalSerializationApi
         @Serializable
         data class PartData(override val source: String, val part: String, val type: String) : SourceData()
+
         @ExperimentalSerializationApi
         @Serializable
         data class CreatorData(
@@ -176,13 +194,14 @@ sealed class ResultData(
             val jp_name: String
         ) : SourceData()
     }
+
     @ExperimentalSerializationApi
     @Serializable
     data class TitleData(
         val title: String,
         val part: String? = null,
         val date: String? = null
-    ): ResultData() {
+    ) : ResultData() {
         override fun prettyPrint(): String {
             return "title=${this.title}"
         }
