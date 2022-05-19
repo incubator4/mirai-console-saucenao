@@ -42,7 +42,7 @@ object MiraiConsoleSaucenao : KotlinPlugin(
     JvmPluginDescription(
         id = "com.incubator4.mirai-console-saucenao",
         name = "saucenao",
-        version = "1.0-SNAPSHOT",
+        version = "0.1.0",
     ) {
         author("incubator4")
     }
