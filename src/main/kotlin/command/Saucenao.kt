@@ -89,7 +89,7 @@ object Saucenao :
         }
         try {
             val chain = buildMessageChain {
-                response.results?.map { result ->
+                response.results.map { result ->
                     val message: Message = PlainText(result.prettyPrint() + "\n")
                     +message
                 }
