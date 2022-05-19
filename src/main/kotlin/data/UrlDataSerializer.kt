@@ -11,12 +11,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonDecoder
 import kotlinx.serialization.json.JsonObject
 
+@OptIn(ExperimentalSerializationApi::class)
 @Serializer(forClass = ResultData.UrlData::class)
 object UrlDataSerializer: KSerializer<ResultData.UrlData> {
 
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("UrlData", PrimitiveKind.STRING)
 
-    @OptIn(ExperimentalSerializationApi::class)
     override fun deserialize(decoder: Decoder): ResultData.UrlData {
         require(decoder is JsonDecoder)
         val element = decoder.decodeJsonElement()

@@ -5,8 +5,10 @@ import com.incubator4.data.*
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*
+import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
+import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.http.*
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -33,13 +35,10 @@ suspend fun main() {
             url = "http://saucenao.com/images/static/banner.gif"
         )
 
-        val response = client.submitForm(
-            url = "https://saucenao.com/search.php",
-            formParameters = Parameters.build { body.toMap().forEach { (k, v) -> append(k, v) } },
-            encodeInQuery = true
-        )
-        val result = response.body() as ResponseBody
-        println(result.header)
-
-
+        val response : ResponseBody = client.get("https://saucenao.com/search.php") {
+            body.toMap().forEach { (key, value) ->
+                parameter(key, value)
+            }
+        }
+        print(response.header)
 }
