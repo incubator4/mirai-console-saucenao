@@ -1,7 +1,8 @@
 # mirai-console-saucenao
+
 [![GitHub top language](https://img.shields.io/github/languages/top/incubator4/mirai-console-saucenao?style=flat)](https://kotlinlang.org/)
 [![Gradle CI](https://github.com/incubator4/mirai-console-saucenao/workflows/Gradle%20CI/badge.svg?branch=main)](https://github.com/incubator4/mirai-console-saucenao/actions?query=workflow%3A%22Gradle+CI%22)
-[![GitHub](https://img.shields.io/github/license/incubator4/mirai-console-saucenao?style=flat)](https://github.com/incubator4/mirai-console-saucenao/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/incubator4/mirai-console-saucenao?style=flat)](https://github.com/incubator4/mirai-console-saucenao/blob/main/LICENSE)
 [![GitHub all releases](https://img.shields.io/github/downloads/incubator4/mirai-console-saucenao/total)](https://github.com/incubator4/mirai-console-saucenao/releases/latest)
 [![visitors](https://visitor-badge.glitch.me/badge?page_id=incubator4.mirai%2Dconsole%2Dsaucenao)]()
 
